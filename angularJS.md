@@ -117,8 +117,7 @@ for(i of arr) {
 #### 6. Default parameters
 Default parameters allow us to initialize functions with default values. A default is used when an argument is either omitted or undefined; this means null is a valid value. A default parameter can be anything from a number to another function.
 #####Example:
-function Book(name = 'Dau truong sinh tu', price = 10, url = https://vi.wikipedia.org/wiki/Đấu_trường_sinh_tử")
-{
+function Book(name = 'Dau truong sinh tu', price = 10, url = https://vi.wikipedia.org/wiki/Đấu trường sinhtử") {
   return name + " costs " + price + "." + " More info: " + url;
 }
 console.log(`${Book()}`);
