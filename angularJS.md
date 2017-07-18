@@ -8,7 +8,7 @@
 There are two main ways to get the TypeScript tools:
 - Via npm (the Node.js package manager)
 - By installing TypeScript’s Visual Studio plugins
-For NPM users:
+ For NPM users:
 `npm install -g typescript`
 #### 3. How do you compile TypeScript files?
 We used a .ts extension, but this code is just JavaScript. You could have copy/pasted this straight out of an existing JavaScript app.
