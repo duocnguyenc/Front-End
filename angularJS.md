@@ -1,16 +1,16 @@
-#Typescript  ES6
-##Knowledge round-up
-###Typescript
-####1. What is TypeScript and Why do we need it?
+# Typescript  ES6
+## Knowledge round-up
+### Typescript
+#### 1. What is TypeScript and Why do we need it?
 - TypeScript is a superset of JavaScript which primarily provides optional static typing, classes and interfaces. One of the big benefits is to enable IDEs to provide a richer environment for spotting common errors as you type the code.TypeScript is a free and open-source programming language developed and maintained by Microsoft.
 - Why do we need it? When us using TypeScript you can use the latest ES6 (and some ES2016/ES2017) features but not worry about browser or node version support, since TypeScript compiles to “standard JavaScript”. Even though today’s browsers support much of ES6, TypeScript levels the playing field, making sure the rendered JavaScript is 100% compatible across all platforms.
-####2. How can you get TypeScript and install it?
+#### 2. How can you get TypeScript and install it?
 There are two main ways to get the TypeScript tools:
 - Via npm (the Node.js package manager)
 - By installing TypeScript’s Visual Studio plugins
 For NPM users:
 `npm install -g typescript`
-####3. How do you compile TypeScript files?
+#### 3. How do you compile TypeScript files?
 We used a .ts extension, but this code is just JavaScript. You could have copy/pasted this straight out of an existing JavaScript app.
 At the command line, run the TypeScript compiler:
 `tsc <filename>.ts`
@@ -21,7 +21,7 @@ Object Oriented terms are supported by TypeScript are:
 - Class
 - Inheritance
 - Data Types
-#####Example for Interface:
+##### Example for Interface:
 interface Book
 {
   bookname: string;
@@ -34,7 +34,7 @@ function info(book: Book) {
 var book= { bookname: "Dau truong sinh tu", price: "10" };
 document.body.innerHTML = info(book);
 
-#####Example for Class:
+##### Example for Class:
 class Car {
   name: string;
   color: string;
@@ -49,7 +49,7 @@ class Car {
 var car = new Car("Toyota","Sliver");
 console.log(car.showinfo());
   
-####5. How do you implement inheritance in TypeScript? Write an example.
+#### 5. How do you implement inheritance in TypeScript? Write an example.
 We using keyword `extends` to implement inheritance in TypeScript.
 #####Example:
 class Motor extends Car {
@@ -65,8 +65,8 @@ class Motor extends Car {
 var motor = new Motor(2);
 console.log(mortor.showinfo());
 
-###ES6
-####1. Block scope variable
+### ES6
+#### 1. Block scope variable
 function calculateTotalAmount (vip) {
   const amount = 0  
   if (vip) {
@@ -81,26 +81,26 @@ function calculateTotalAmount (vip) {
   return amount
 }
 
-####2. Template Literals
+#### 2. Template Literals
 var name = 'Nguyen Cong Duoc';
 var team  = 'PHP';
 var info = `My fullname is ${name}.I am a ${team} Dev`;
 console.log(info);
 
-####3. Multi-line strings
+#### 3. Multi-line strings
 var info = `My hobbies are read a book, watch a film.
 	 	I like animal.
 	 	I am a member of PHP team.`
 console.log(info);
 
-####4. Arrow functions
+#### 4. Arrow functions
 var logUpperCase = function() {
   this.string = this.string.toUpperCase()
   return () => console.log(this.string)
 }
 logUpperCase.call({ string: 'duoc nguyen c.' })()
 
-####5. For...of
+#### 5. For...of
 With the new for-of loop, ES6 aims to bring the best parts from all three of the previous approaches.
 Example:
 var arr = [3, 5, 7];
@@ -114,7 +114,7 @@ for(i of arr) {
 }
 //ouput: 3 5 7
 
-####6. Default parameters
+#### 6. Default parameters
 Default parameters allow us to initialize functions with default values. A default is used when an argument is either omitted or undefined; this means null is a valid value. A default parameter can be anything from a number to another function.
 #####Example:
 function Book(name = 'Dau truong sinh tu', price = 10, url = https://vi.wikipedia.org/wiki/Đấu_trường_sinh_tử")
