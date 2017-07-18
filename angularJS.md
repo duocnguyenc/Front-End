@@ -22,6 +22,7 @@ Object Oriented terms are supported by TypeScript are:
 - Inheritance
 - Data Types
 ##### Example for Interface:
+~~~java
 interface Book
 {
   bookname: string;
@@ -33,8 +34,9 @@ function info(book: Book) {
 }
 var book= { bookname: "Dau truong sinh tu", price: "10" };
 document.body.innerHTML = info(book);
-
+~~~
 ##### Example for Class:
+~~~java
 class Car {
   name: string;
   color: string;
@@ -48,10 +50,11 @@ class Car {
 }
 var car = new Car("Toyota","Sliver");
 console.log(car.showinfo());
-  
+ ~~~
 #### 5. How do you implement inheritance in TypeScript? Write an example.
 We using keyword `extends` to implement inheritance in TypeScript.
 #####Example:
+~~~java
 class Motor extends Car {
   wheel: number;
   constructor(wheel: number) {
@@ -64,9 +67,10 @@ class Motor extends Car {
 }
 var motor = new Motor(2);
 console.log(mortor.showinfo());
-
+~~~
 ### ES6
 #### 1. Block scope variable
+~~~java
 function calculateTotalAmount (vip) {
   const amount = 0  
   if (vip) {
@@ -80,29 +84,33 @@ function calculateTotalAmount (vip) {
   }  
   return amount
 }
-
+~~~
 #### 2. Template Literals
+~~~java
 var name = 'Nguyen Cong Duoc';
 var team  = 'PHP';
-var info = `My fullname is ${name}.I am a ${team} Dev`;
+var info = ` My fullname is ${name}.I am a ${team} Dev`;
 console.log(info);
-
+~~~
 #### 3. Multi-line strings
+~~~java
 var info = `My hobbies are read a book, watch a film.
 	 	I like animal.
 	 	I am a member of PHP team.`
 console.log(info);
-
+~~~
 #### 4. Arrow functions
+~~~java
 var logUpperCase = function() {
   this.string = this.string.toUpperCase()
   return () => console.log(this.string)
 }
 logUpperCase.call({ string: 'duoc nguyen c.' })()
-
+~~~
 #### 5. For...of
 With the new for-of loop, ES6 aims to bring the best parts from all three of the previous approaches.
 Example:
+~~~java
 var arr = [3, 5, 7];
 for(i in arr) {
 	console.log(i);	
@@ -113,11 +121,13 @@ for(i of arr) {
 	console.log(i);	
 }
 //ouput: 3 5 7
-
+~~~
 #### 6. Default parameters
 Default parameters allow us to initialize functions with default values. A default is used when an argument is either omitted or undefined; this means null is a valid value. A default parameter can be anything from a number to another function.
 #####Example:
+~~~java
 function Book(name = 'Dau truong sinh tu', price = 10, url = https://vi.wikipedia.org/wiki/Đấu trường sinhtử") {
   return name + " costs " + price + "." + " More info: " + url;
 }
 console.log(`${Book()}`);
+~~~
