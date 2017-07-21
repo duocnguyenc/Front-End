@@ -9,7 +9,7 @@ class Member {
 		$member = document.createElement(`li`);
 		$member.className = `list-group-item`;
 		$btnDel = document.createElement('button');
-		$btnDel.className = "btn btn-danger pull-right";
+		$btnDel.className = "btn btn-danger btn-xs pull-right";
 		$btnDel.innerHTML = 'Delete';
 		$span = document.createElement(`span`);
 		$span.innerHTML = $name;
