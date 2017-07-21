@@ -16,6 +16,7 @@ class Member {
 		$member.appendChild($span);
 		$member.appendChild($btnDel);
 		$content.appendChild($member);
+		$input.value = "";
 	}
 
 	createDeleteEvent = () => {
