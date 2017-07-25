@@ -6,21 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'AngularJS';
+	hello: string;
+	name: string;
+	constructor(){
+		this.hello = "Hello World!";
+	}
+ 	showName() {
+ 		this.name = "My name is Duoc";
+ 	}
+ 	hideName() {
+ 		this.name = "";
+ 	}
 }
 
-/*
-@Component({
-	selector: 'app-root',
-	template:
-	`<div>
-		<button (click) = checkClick() value = "Click me!"></button>
-	</div>
-	`
-})
-export class Counter {
-	checkClick() {
-		console.log('Clicked!');
-	}
-}
-*/
