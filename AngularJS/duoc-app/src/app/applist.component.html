@@ -1,8 +1,8 @@
 <div>
 	<ul>
-		<li *ngFor=' let item of data, let i = index '>
+		<li *ngFor=' let item of data, let i = index ' class="list-group-item">
 			{{item}}
-	        <button (click)='deleteMember(i)' class="btn btn-danger btn-xs">Delete</button>
+	        <button (click)='deleteMem(i)' class="btn btn-danger btn-xs pull-right">Delete</button>
 		</li>
 	</ul>
 </div>

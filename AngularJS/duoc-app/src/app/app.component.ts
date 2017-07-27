@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild} from '@angular/core';
 import { Member } from './member';
+import { Applist } from './applist.component';
+import { Appform } from './appform.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,14 +11,17 @@ import { Member } from './member';
 export class AppComponent {
 	hello: string;
 	name: string;
-	constructor(){
-		this.hello = "Hello World!";
-	}
- 	showName() {
- 		this.name = "My name is Duoc";
- 	}
- 	hideName() {
- 		this.name = "";
- 	}
+	@ViewChild(Applist) lists: any;
+ 	@ViewChild(Appform) listname: any;
+ 	constructor(){
+ 
+   }
+   ngOnInit(){
+   	this.lists.data = this.listname.listname;
+   }
+   
+   AfterContentInit(){
+   		// this.lists.datas.push(this.getName.name);
+   }
 }
 

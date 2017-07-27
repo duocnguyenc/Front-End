@@ -9,11 +9,14 @@ import { Member } from './member';
 export class Appform {
 	title: string = 'LIST MEMBER MANAGERMENT';
 	name: string;
-
+	listname: string[]= [];
 	constructor(private syncname : Member) {
 		this.name='';
 	}
 	initContent() {
      	this.syncname.insertData(this.name);
+   	}
+   	addMember() {
+   		this.listname.push(this.name);
    	}
 }

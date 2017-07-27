@@ -13,5 +13,8 @@ export class Applist {
 	deleteMember(i:number) {
 		this.syncname.deleteData(i);
 	}
+	deleteMem(index:number) {
+		this.syncname.deleteData(index);
+	}
 
 }
