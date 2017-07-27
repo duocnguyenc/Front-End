@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output, OnInit, ViewChild} from '@angular/core';
 import { Member } from './member';
 @Component({
   selector: 'app-form',
@@ -6,17 +6,21 @@ import { Member } from './member';
  
 })
 
-export class Appform {
+export class Appform implements OnInit{
 	title: string = 'LIST MEMBER MANAGERMENT';
 	name: string;
 	listname: string[]= [];
+	@Output() result: EventEmitter<any> = new EventEmitter<any>();
 	constructor(private syncname : Member) {
 		this.name='';
 	}
-	initContent() {
-     	this.syncname.insertData(this.name);
-   	}
    	addMember() {
    		this.listname.push(this.name);
    	}
+   	ngOnInit() {
+ 
+   }
+   newMember() {
+      this.result.emit(this.name);
+   }
 }

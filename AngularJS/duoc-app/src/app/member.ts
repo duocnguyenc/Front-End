@@ -11,7 +11,7 @@ export class Member {
     this.listMember.push(data);
   }
 
-  deleteData(index: number){
+  	deleteData(index: number){
       this.listMember.splice(index,1);
   }
 }
