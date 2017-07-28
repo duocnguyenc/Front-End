@@ -13,7 +13,7 @@ export class Applist implements OnInit{
 	}
 	ngOnInit(): any {
   	 }
-   deleteMember(i: number)  {
+   	deleteMember(i: number)  {
        this.result2.emit(i);
    }
 }
