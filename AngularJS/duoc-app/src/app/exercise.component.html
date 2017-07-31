@@ -1,0 +1,48 @@
+<table>
+	<thead>
+		<tr>
+			<td>Avatar</td>
+			<td>Name</td>
+			<td>Birth</td>
+			<td>Team</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor= "let list of trainer,let id = index">
+			<td> <img [ngStyle] = "{width: '50px', height:'50px'}"src ="{{list.image}}"> </td>
+			<td> {{list.name}}</td>
+			<td >
+			<template [ngIf] = "list.birthDay" >{{list.birthDay}}</template>
+			<template [ngIf] = "!list.birthDay">Empty</template>
+			</td>
+			<td *ngIf= "list.team == 'FE'" [ngStyle]= "{color: 'red'}">{{list.team}}</td>
+			<td *ngIf= "list.team == 'Ruby'" [ngStyle]= "{color: 'yellow'}">{{list.team}}</td>
+			<td *ngIf= "list.team == 'PHP'" [ngStyle]= "{color: 'blue'}">{{list.team}}</td>
+			<td><button (click) = "showDetail(id)">Show</button></td>
+		</tr>
+	</tbody>
+</table>
+<h1>Show Detail Trainer Information</h1>
+
+<div>
+	<table *ngIf = "objectName != null">
+		<tr>
+			<td>Avatar</td>
+			<td>Name</td>
+			<td>Birthday</td>
+			<td>Team</td>
+		</tr>
+		<tr>
+			<td><img [ngStyle] = "{width: '50px', height:'50px'}"src ="{{objectName.image}}"></td>
+			<td>{{objectName.name}}</td>
+			<td>
+			<span [data]="objectName.birthDay"></span>
+			</td>
+			<td *ngIf= "objectName.team == 'FE'" [ngStyle]= "{color: 'red'}">{{objectName.team}}</td>
+			<td *ngIf= "objectName.team == 'Ruby'" [ngStyle]= "{color: 'yellow'}">{{objectName.team}}</td>
+			<td *ngIf= "objectName.team == 'PHP'" [ngStyle]= "{color: 'blue'}">{{objectName.team}}</td>
+			<td><button>Add</button></td>
+		</tr>
+	</table>
+</div>
