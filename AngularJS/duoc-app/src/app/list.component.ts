@@ -5,14 +5,14 @@ import { myService } from '../myService';
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['../app.component.css'],
-  providers: [TrainersService]
+  providers: [myService]
 })
 export class ListComponent {
   trainers: any[];
 
   @Output() showdetail: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(private list: TrainersService) {
+  constructor(private list: myService) {
   }
 
   ngOnInit() {
