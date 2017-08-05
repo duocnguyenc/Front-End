@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild,OnInit, AfterContentInit } from '@angular/core';
+import { MyService } from './myservice';
+import { AppDetailComponent } from './detail/app.detail.component';
 
 @Component({
   selector: 'app-root',
@@ -6,21 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string = 'AngularJS';
+    title:string = 'AngularJS';
+    @ViewChild(AppDetailComponent) detacomp: AppDetailComponent;
+    constructo() {
+
+  }
+    showDetail (trainer: any) {
+     this.detacomp.showmem = trainer; 
+    }
 }
 
-/*
-@Component({
-	selector: 'app-root',
-	template:
-	`<div>
-		<button (click) = checkClick() value = "Click me!"></button>
-	</div>
-	`
-})
-export class Counter {
-	checkClick() {
-		console.log('Clicked!');
-	}
-}
-*/
+
