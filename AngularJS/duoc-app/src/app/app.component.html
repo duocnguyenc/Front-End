@@ -1,4 +1,72 @@
+<!-- <app-list>
+</app-list>
+
+ -->
 <div>
- <list-root (result) = 'showDetail($event)'></list-root>
- <detail-root></detail-root>
- </div> 
+  <h1>News {{title}}</h1>
+  <form [formGroup] = "formRegister" (ngSubmit) = "addMember()">
+    <table>
+      <tbody formGroupName = "personal">
+        <tr>
+          <td>
+            <label>Avatar: </label>
+          </td>
+          <td>
+            <input type="text" formControlName="avatar">
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <label>Name: </label>
+          </td>
+          <td>
+            <input type="text" formControlName="name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>BirthDay: </label>
+          </td>
+          <td>
+            <input type="date" formControlName="birthday">
+          </td>
+        </tr>
+      </tbody>
+      <tbody formGroupName = "company">
+      <tr>
+        <td>
+          <label>Joined: </label>
+        </td>
+        <td>
+          <input type="date" formControlName="joined">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Team: </label>
+        </td>
+        <td>
+          <select formControlName="team">
+            <option name="PHP">PHP</option>
+            <option name="Ruby">Ruby</option>
+            <option name="FE">FE</option>
+          </select>
+        </td>
+      </tr>
+      </tbody>
+      <tr>
+        <td>
+          <label>Skill:</label>
+        </td>
+        <td>
+          <textarea placeholder="Example:MySQL,PHP..." formControlName="skills" >
+          </textarea>
+        </td>
+      </tr>
+    </table>
+    <button type="submit">Sumbit</button>
+  </form>
+</div>
+<div>
+  {{members.name}}
+</div>
